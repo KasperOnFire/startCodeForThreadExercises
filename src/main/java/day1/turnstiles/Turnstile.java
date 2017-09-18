@@ -1,27 +1,28 @@
 package day1.turnstiles;
 
-public class Turnstile implements Runnable{
-  private final TurnstileCounter counter;
-  //This represents the "local" counts done by a specific turnstille instance
-  //Not really used in the exercise
-  private int count;
+public class Turnstile implements Runnable {
 
-  final int COUNT_MAX = 1000;
+    private final TurnstileCounter counter;
+    //This represents the "local" counts done by a specific turnstille instance
+    //Not really used in the exercise
+    private int count;
 
-  Turnstile(TurnstileCounter c) {
-    counter = c;
-  }
+    final int COUNT_MAX = 1000;
 
-  public int getCount() {
-    return count;
-  }
-
-  @Override
-  public void run() {
-    for (int i = 0; i < COUNT_MAX; i++) {
-      counter.incr();
-      count++;
+    Turnstile(TurnstileCounter c) {
+        counter = c;
     }
-  }
-  
+
+    public int getCount() {
+        return count;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < COUNT_MAX; i++) {
+            counter.incr();
+            count++;
+        }
+    }
+
 }
