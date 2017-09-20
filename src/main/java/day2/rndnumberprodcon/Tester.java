@@ -35,5 +35,5 @@ public class Tester {
         c) i would use offer() since this tries to add the number to the end of the queue, and returns true or false depending on the success of the action.
         d) i would use take() since tries to get an element, and if no are avaible, waits until it is and tries again.
          */
-    }
+    }   
 }
